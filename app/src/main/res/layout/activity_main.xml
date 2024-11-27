@@ -10,7 +10,8 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="¡Bienvenido a RecetApp!"
-        android:textSize="20sp"
+        android:textColor="@color/purple"
+        android:textSize="44sp"
         android:textStyle="bold"
         android:gravity="center"
         android:layout_marginBottom="16dp" />

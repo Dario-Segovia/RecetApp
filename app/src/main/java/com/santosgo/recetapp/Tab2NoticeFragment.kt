@@ -36,7 +36,7 @@ class Tab2NoticeFragment : Fragment() {
 
             findNavController().navigate(R.id.action_tab2NoticeFragment_to_loginFragment)
         }
-        binding.btnMenu.setOnClickListener {
+        binding.btnComenzar.setOnClickListener {
 
             findNavController().navigate(R.id.action_noticeFragment5_to_principalFragment)
         }

@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/recycler_view"
+    app:startDestination="@id/homeFragment">
+
+    <fragment
+        android:id="@+id/homeFragment"
+        android:name="com.santosgo.recetapp.ItemListFragment"
+        android:label="fragment_home"
+        tools:layout="@layout/fragment_home" >
+        <action
+            android:id="@+id/action_homeFragment_to_detailItemFragment2"
+            app:destination="@id/detailItemFragment2" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/favoriteFragment"
+        android:name="com.santosgo.recetapp.FavItemListFragment"
+        android:label="fragment_favorite"
+        tools:layout="@layout/fragment_favorite" >
+
+        <action
+        android:id="@+id/action_favoriteFragment_detail_fav_item"
+        app:destination="@id/detailFavItemFragment" />
+
+    </fragment>
+
+    <fragment
+        android:id="@+id/userInfoFragment"
+        android:name="com.santosgo.recetapp.UserInfoFragment"
+        android:label="fragment_user_info"
+        tools:layout="@layout/fragment_user_info" />
+    <fragment
+        android:id="@+id/detailItemFragment2"
+        android:name="com.santosgo.recetapp.DetailItemFragment"
+        android:label="fragment_detail_item"
+        tools:layout="@layout/fragment_detail_item" />
+    <fragment
+        android:id="@+id/detailFavItemFragment"
+        android:name="com.santosgo.recetapp.DetailFavItemFragment"
+        android:label="DetailFavItemFragment" />
+
+</navigation>

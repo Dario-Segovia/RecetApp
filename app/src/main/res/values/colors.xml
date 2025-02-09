@@ -2,4 +2,11 @@
 <resources>
     <color name="black">#FF000000</color>
     <color name="purple">#673AB7</color>
+    <color name="colorPrimary">#6200EE</color> <!-- Ejemplo: color principal -->
+    <color name="colorPrimaryDark">#3700B3</color> <!-- Color de la barra de estado -->
+    <color name="colorAccent">#03DAC5</color> <!-- Color de acento -->
+    <color name="backgroundColor">#FFFFFF</color> <!-- Color de fondo principal -->
+    <color name="textColorPrimary">#000000</color> <!-- Color del texto principal -->
+    <color name="textColorSecondary">#757575</color> <!-- Color del texto secundario -->
+    <color name="buttonBackgroundColor">#6200EE</color> <!-- Color de fondo de botones -->
 </resources>

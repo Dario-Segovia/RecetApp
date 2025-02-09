@@ -1,8 +1,0 @@
-<resources>
-    <string name="app_name">RecetApp</string>
-    <!-- TODO: Remove or change this placeholder text -->
-    <string name="hello_blank_fragment">Hello blank fragment</string>
-    <string name="tvNotice">Notificaciones de la APP</string>
-    <string name="btnMenu">Menú</string>
-    <string name="tab2Text">Bienvenido al tab2</string>
-</resources>

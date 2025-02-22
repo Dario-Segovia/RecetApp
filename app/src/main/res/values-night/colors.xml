@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- Colores para el modo oscuro -->
+    <color name="colorPrimary">#BB86FC</color> <!-- Ejemplo: color principal -->
+    <color name="colorPrimaryDark">#3700B3</color> <!-- Color de la barra de estado -->
+    <color name="colorAccent">#03DAC5</color> <!-- Color de acento -->
+    <color name="backgroundColor">#121212</color> <!-- Color de fondo principal en modo oscuro -->
+    <color name="textColorPrimary">#FFFFFF</color> <!-- Color del texto principal -->
+    <color name="textColorSecondary">#B0B0B0</color> <!-- Color del texto secundario -->
+    <color name="buttonBackgroundColor">#BB86FC</color> <!-- Color de fondo de botones -->
+</resources>

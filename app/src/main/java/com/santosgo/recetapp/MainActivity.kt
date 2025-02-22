@@ -1,27 +1,47 @@
 package com.santosgo.recetapp
 
-import android.content.Intent
 import android.os.Bundle
-import android.widget.Button
-import android.widget.EditText
+import androidx.activity.enableEdgeToEdge
 import androidx.appcompat.app.AppCompatActivity
-
+import androidx.appcompat.widget.Toolbar
+import androidx.core.view.ViewCompat
+import androidx.core.view.WindowInsetsCompat
+import androidx.navigation.NavController
+import androidx.navigation.fragment.NavHostFragment
+import androidx.navigation.ui.AppBarConfiguration
+import androidx.navigation.ui.NavigationUI
 
 class MainActivity : AppCompatActivity() {
 
+    private lateinit var navController: NavController
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
+        enableEdgeToEdge()
         setContentView(R.layout.activity_main)
 
-        val userInput = findViewById<EditText>(R.id.userInput)
-        val navigateButton = findViewById<Button>(R.id.navigateButton)
+        // Configurar Toolbar como ActionBar
+        val toolbar: Toolbar = findViewById(R.id.toolbar)
+        setSupportActionBar(toolbar)  // ← Esto previene el error
 
-        navigateButton.setOnClickListener {
-            val userName = userInput.text.toString()
-            val intent = Intent(this, CreditActivity::class.java)
-            intent.putExtra("USER_NAME", userName)
-            startActivity(intent)
+        // Obtener NavController correctamente
+        val navHostFragment = supportFragmentManager.findFragmentById(R.id.fragmentContainerView) as NavHostFragment
+        navController = navHostFragment.navController
+
+        val appBarConfiguration = AppBarConfiguration(setOf(R.id.loginFragment))
+        NavigationUI.setupActionBarWithNavController(this, navController, appBarConfiguration)
+    }
+
+
+    override fun onSupportNavigateUp(): Boolean {
+        return navController.navigateUp() || super.onSupportNavigateUp()
+    }
+
+    override fun onBackPressed() {
+        if (navController.currentDestination?.id == R.id.loginFragment) {
+            // Evita cerrar la app si el usuario está en loginFragment
+        } else {
+            super.onBackPressed()
         }
     }
 }
